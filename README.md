@@ -1,6 +1,12 @@
 # better_request
 A simple library I made in about 2-3 hours.
 
+It's not faster but even worse it's slower but this is built for security & customization
+which basically means that this library gives you more data about the response and gives you the opportunity to choose what to request.
+
+It's not made for basic API requests, go use RestAPI for that.
+bettter_request is made for more safer requests e.g Login & Registration
+
 ## Usage
 
 Soon
