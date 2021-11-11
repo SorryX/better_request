@@ -38,6 +38,7 @@ namespace better_webclient
 
             // Adding headers is really easy ( Need a few changes tho )
             requestData.Headers.Add(new Query("Authorization", "test"));
+            requestData.Headers.Add(new Query("UserAgent", "test"));
 
             // Lastly printing out the content
             Console.WriteLine(client.Get(requestData).Content);
