@@ -30,7 +30,7 @@ namespace better_webclient
             var requestData = new Request
             {
                 // Address is basically the url, where you want this request to go
-                Address = "https://pastebin.com/raw/s9EPhhfG",
+                Address = "URL",
                 
                 // If turned on this will throw an error if the status code isn't success (200)
                 EnsureSuccessStatusCode = true,
