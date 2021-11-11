@@ -9,8 +9,42 @@ bettter_request is made for more safer requests e.g Login & Registration
 
 ## Usage
 
-Soon
+Currently only supporting **Get, Post**
 
+### Get Requests
+
+```csharp
+using System;
+using static better_webclient.better_webclient;
+
+namespace better_webclient
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Creating a better_client instance
+            var client = new better_webclient();
+
+            // Creating a request class an asigning a few values
+            var requestData = new Request
+            {
+                // Address is basically the url, where you want this request to go
+                Address = "https://pastebin.com/raw/s9EPhhfG",
+                
+                // If turned on this will throw an error if the status code isn't success (200)
+                EnsureSuccessStatusCode = true,
+            };
+
+            // Adding headers is really easy ( Need a few changes tho )
+            requestData.Headers.Add(new Query("Authorization", "test"));
+
+            // Lastly printing out the content
+            Console.WriteLine(client.Get(requestData).Content);
+        }
+    }
+}
+```
 
 ## Explanation
 
